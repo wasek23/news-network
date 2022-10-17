@@ -91,25 +91,25 @@ header .navbar .userPhoto {
 	padding-bottom: 50px;
 }
 
-.newsSection .singleNews {
+.singleNews {
 	background: #fff;
 	padding: 20px;
 	border-radius: 12px;
 }
 
-.newsSection .singleNews .thumbnail {
+.singleNews .thumbnail {
 	border-radius: 10px;
 	margin-bottom: 30px;
 }
 
-.newsSection .singleNews .title {
+.singleNews .title {
 	font-size: 24px;
 	font-weight: 700;
 	color: #121212;
 	margin-bottom: 10px;
 }
 
-.newsSection .singleNews .details {
+.singleNews .details {
 	max-height: 150px;
 	font-size: 16px;
 	line-height: 25px;
@@ -122,30 +122,30 @@ header .navbar .userPhoto {
 	margin-bottom: 15px;
 }
 
-.newsSection .singleNews .author {
+.singleNews .author {
 	display: flex;
 	align-items: center;
 	gap: 10px;
 }
 
-.newsSection .singleNews .author .authorPhoto {
+.singleNews .author .authorPhoto {
 	width: 40px;
 	height: 40px;
 	border-radius: 50%;
 }
 
-.newsSection .singleNews .author .authorName {
+.singleNews .author .authorName {
 	font-size: 16px;
 	color: #2b2c34;
 }
 
-.newsSection .singleNews .author .publishDate {
+.singleNews .author .publishDate {
 	font-size: 14px;
 	color: #718797;
 }
 
-.newsSection .singleNews .views,
-.newsSection .singleNews .rating {
+.singleNews .views,
+.singleNews .rating {
 	font-size: 18px;
 	line-height: 18px;
 	font-weight: 700;
@@ -155,7 +155,7 @@ header .navbar .userPhoto {
 	gap: 12px;
 }
 
-.newsSection .singleNews .modalBtn {
+.singleNews .modalBtn {
 	width: 40px;
 	height: 40px;
 	color: var(--green);
@@ -164,12 +164,6 @@ header .navbar .userPhoto {
 	outline: 0;
 	box-shadow: none;
 }
-
-.newsSection .singleNews {}
-
-.newsSection .singleNews {}
-
-.newsSection {}
 
 /* Footer */
 footer {

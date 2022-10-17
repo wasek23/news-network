@@ -5,7 +5,7 @@ done nav bar min 2 opt
 done Load cats data
 done load data when click on cat
 done news thumb, title, description text ellipsis, author img,name,date , views, icon button
-open modal when click on icon button (view author name miss (No data available))
+done open modal when click on icon button (view author name miss (No data available))
 
 Show spinner on cat click
 done show news count of cat
