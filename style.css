@@ -179,6 +179,38 @@ header .navbar .userPhoto {
 	box-shadow: none;
 }
 
+/* Blog */
+.blogSection {
+	padding: 50px 0;
+}
+
+.blogSection .article {
+	background: #fff;
+	padding: 20px;
+	border-radius: 12px;
+	margin-bottom: 30px;
+}
+
+.blogSection .article .title {
+	font-size: 24px;
+	font-weight: 700;
+	color: #121212;
+	margin-bottom: 10px;
+}
+
+.blogSection .article .details {
+	font-size: 16px;
+	line-height: 25px;
+	color: #949494;
+	margin: 0;
+}
+
+.blogSection .article .details pre {
+	color: #d63384;
+	background: #f4f4f4;
+	padding: 0 10px;
+}
+
 /* Footer */
 footer {
 	font-size: 16px;
