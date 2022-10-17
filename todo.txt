@@ -1,10 +1,10 @@
 done Private repo
-done Dirrerent name
+done Different name
 done nav bar min 2 opt
 
 done Load cats data
 done load data when click on cat
-news thumb, title, description text ellipsis, author img,name,date , views, icon button
+done news thumb, title, description text ellipsis, author img,name,date , views, icon button
 open modal when click on icon button (view author name miss (No data available))
 
 Show spinner on cat click
