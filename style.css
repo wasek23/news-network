@@ -91,6 +91,16 @@ header .navbar .userPhoto {
 	padding-bottom: 50px;
 }
 
+.newsSection #newsLoader {
+	font-size: 20px;
+	color: var(--green);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	height: 400px;
+}
+
 .singleNews {
 	background: #fff;
 	padding: 20px;
@@ -98,6 +108,7 @@ header .navbar .userPhoto {
 }
 
 .singleNews .thumbnail {
+	width: 100%;
 	border-radius: 10px;
 	margin-bottom: 30px;
 }
@@ -110,16 +121,19 @@ header .navbar .userPhoto {
 }
 
 .singleNews .details {
-	max-height: 150px;
 	font-size: 16px;
 	line-height: 25px;
 	color: #949494;
+	margin-bottom: 15px;
+}
+
+.singleNews .details.truncate {
+	max-height: 150px;
 	display: -webkit-box;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 6;
-	margin-bottom: 15px;
 }
 
 .singleNews .author {

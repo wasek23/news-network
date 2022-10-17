@@ -1,3 +1,11 @@
+// Selectors
+const categoriesListEl = document.getElementById('categoriesList');
+const newsLoaderEl = document.getElementById('newsLoader');
+const categoryItemsCountEl = document.getElementById('categoryItemsCount');
+const newsListEl = document.getElementById('newsList');
+const modalBodyEl = document.getElementById('newsDetailsModalBody');
+
+
 // Categories
 const loadCategories = () => {
     const url = 'https://openapi.programming-hero.com/api/news/categories';
@@ -8,9 +16,7 @@ const loadCategories = () => {
 }
 
 const displayCategories = (categories) => {
-    const ulEl = document.getElementById('categoriesList');
-
-    ulEl.innerHTML = categories.map(category => {
+    categoriesListEl.innerHTML = categories.map(category => {
         const { category_id, category_name } = category;
 
         return `<li onClick="loadNews('${category_name}', '${category_id}')">${category_name}</li>`;
@@ -21,6 +27,9 @@ loadCategories();
 
 // On Category click
 const loadNews = (cat, id) => {
+    newsLoaderEl.classList.remove('d-none'); // Loader
+    newsListEl.innerHTML = '';
+
     const url = `https://openapi.programming-hero.com/api/news/category/${id}`;
     fetch(url)
         .then(res => res.json())
@@ -37,7 +46,7 @@ const renderSingleNews = (news, isMore = false) => {
 
         <h3 class='title'>${title}</h3>
 
-        <p class='details'>${details}</p>
+        <p class='details ${isMore ? 'truncate' : ''}'>${details}</p>
 
         <div class='d-flex align-items-center justify-content-between mb-4'>
             <div class='author'>
@@ -79,14 +88,14 @@ const renderSingleNews = (news, isMore = false) => {
 
 const displayNews = (cat, data) => {
     // Categories count
-    const categoryItemsCountEl = document.getElementById('categoryItemsCount');
     categoryItemsCountEl.innerHTML = `<span>${data.length > 0 ? `${data.length} items found for category <span>${cat}</span>` : `No news found for category <span>${cat}</span>`}</span>`;
 
     // Display News
-    const newsListEl = document.getElementById('newsList');
     newsListEl.innerHTML = data.map(news => `<div class='col-12 col-sm-6 col-lg-4 mb-4'>
         ${renderSingleNews(news, true)}
     </div>`).join('');
+
+    newsLoaderEl.classList.add('d-none'); // Loader
 }
 
 // News Details
@@ -99,7 +108,5 @@ const loadNewsDetails = id => {
 }
 
 const displayNewsDetails = data => {
-    const modalBodyEl = document.getElementById('newsDetailsModalBody');
-
     modalBodyEl.innerHTML = renderSingleNews(data, false);
 }
