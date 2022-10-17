@@ -50,6 +50,42 @@ header .navbar .userPhoto {
 	border-radius: 50%;
 }
 
+/* Categories Section */
+.categoriesSection {
+	padding: 30px 0 40px 0;
+}
+
+.categoriesSection #categoriesList {
+	list-style-type: none;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 0;
+}
+
+.categoriesSection #categoriesList li {
+	font-size: 18px;
+	color: #858585;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.categoriesSection #categoryItemsCount>span {
+	width: 100%;
+	font-size: 18px;
+	color: #000;
+	background: #fff;
+	display: inline-block;
+	padding: 20px;
+	border-radius: 8px;
+	margin-top: 40px;
+}
+
+.categoriesSection #categoryItemsCount span span {
+	font-weight: bold;
+}
+
 /* Footer */
 footer {
 	font-size: 16px;
