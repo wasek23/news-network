@@ -7,11 +7,11 @@ done load data when click on cat
 done news thumb, title, description text ellipsis, author img,name,date , views, icon button
 done open modal when click on icon button (view author name miss (No data available))
 
-Show spinner on cat click
+done Show spinner on cat click
 done show news count of cat
 done responsive
 done use arrow func, catch
-sort news by view
+done sort news by view
 10 commits
 Q: blog - 4-5 ine
     difference between var let and const

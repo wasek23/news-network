@@ -91,7 +91,9 @@ const displayNews = (cat, data) => {
     categoryItemsCountEl.innerHTML = `<span>${data.length > 0 ? `${data.length} items found for category <span>${cat}</span>` : `No news found for category <span>${cat}</span>`}</span>`;
 
     // Display News
-    newsListEl.innerHTML = data.map(news => `<div class='col-12 col-sm-6 col-lg-4 mb-4'>
+    const sortByView = data.sort((a, b) => b.total_view - a.total_view);
+
+    newsListEl.innerHTML = sortByView.map(news => `<div class='col-12 col-sm-6 col-lg-4 mb-4'>
         ${renderSingleNews(news, true)}
     </div>`).join('');
 
